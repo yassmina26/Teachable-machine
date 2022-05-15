@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="test.js"></script>
 </head>
 
 <body>
@@ -16,19 +17,32 @@
 
     <p id="status">Awaiting TF.js load</p>
 
-    <video id="webcam" autoplay muted></video>
+    <!-- <video id="webcam" autoplay muted></video> -->
 
-    <button id="enableCam">Enable Webcam</button>
-    <button class="dataCollector" data-1hot="0" data-name="Class 1">Gather Class 1 Data</button>
-    <button class="dataCollector" data-1hot="1" data-name="Class 2">Gather Class 2 Data</button>
-    <button id="train">Train &amp; Predict!</button>
-    <button id="reset">Reset</button>
+    <!-- <button id="enableCam">Enable Webcam</button> -->
+    <div id="div">
+        <div id="div1">
+            <input type="text" id="class1" placeholder="ENTER YOUR FIRST CLASS" name="filename"> </br>
+            <input type="file" id="file1" name="filename"> </br>
+            </br>
+        </div>
+
+
+
+    </div>
+    <form action="/machine">
+        <input id="addClass" name="add" value="Add Class" onclick="addclass()" type="button">
+    </form>
+    <!-- <button class="dataCollector" data-1hot="0" data-name="Class 1">Gather Class 1 Data</button>
+    <button class="dataCollector" data-1hot="1" data-name="Class 2">Gather Class 2 Data</button> -->
+    <!-- <button id="train">Train &amp; Predict!</button>
+    <button id="reset">Reset</button> -->
 
     <!-- Import TensorFlow.js library -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js" type="text/javascript"></script>
 
     <!-- Import the page's JavaScript to do some stuff -->
-    <script type="module" src="./script.js"></script>
+    <!-- <script type="module" src="script.js"></script> -->
 </body>
 
 </html>
