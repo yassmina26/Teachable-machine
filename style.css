@@ -1,33 +1,130 @@
-body {
-    font-family: helvetica, arial, sans-serif;
-    margin: 2em;
+.card-header{
+	background-color: white!important;
+}
+.card-body {
+    max-height: 250px;
+    overflow-y: auto;
+}
+.img-thumb {
+  max-height: 75px;
+  border: 2px solid none;
+   border-radius:3px;
+  padding: 1px;
+  cursor: pointer;
+}
+.img-thumb-wrapper {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+.remove {
+display: none;
+position: absolute;
+top: -10px;
+right: -10px;
+border-radius: 10em;
+padding: 2px 6px 3px;
+text-decoration: none;
+font: 700 21px/20px sans-serif;
+background: #555;
+border: 3px solid #fff;
+color: #FFF;
+cursor: pointer;
+box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+.remove:hover {
+ background: #E54E4E;
+  padding: 3px 7px 5px;
+  top: -11px;
+right: -11px;
+}
+.remove:active {
+ background: #E54E4E;
+  top: -10px;
+right: -11px;
+}
+[type="file"] {
+/* Style the color of the message that says 'No file chosen' */
+  color: #878787;
+}
+[type="file"]::-webkit-file-upload-button {
+  background: #ED1C1B;
+  border: 2px solid #ED1C1B;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 1s ease;
 }
 
-h1 {
-    font-style: italic;
-    color: #FF6F00;
+[type="file"]::-webkit-file-upload-button:hover {
+  background: #fff;
+  border: 2px solid #535353;
+  color: #000;
 }
 
-
-video {
-    clear: both;
-    display: block;
-    margin: 10px;
-    background: #000000;
-    width: 640px;
-    height: 480px;
+hr{
+	border-top: 3px solid black;
 }
 
-button {
-    padding: 10px;
-    float: left;
-    margin: 5px 3px 5px 10px;
+  .indicator {
+	 position: relative;
+	 width: 50px;
+	 height: 50px;
+	 transform: rotate(45deg);
 }
-
-.removed {
-    display: none;
+  .indicator span {
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 box-sizing: border-box;
+	 border: none;
+	 border-bottom: 3px solid #fff;
+	 border-right: 3px solid #fff;
+	 animation: animate 1s linear infinite;
 }
-
-#status {
-    font-size: 150%;
+  .indicator span:nth-child(1) {
+	 top: -30px;
+	 left: -30px;
+	 animation-delay: 0s;
+}
+  .indicator span:nth-child(2) {
+	 top: -15px;
+	 left: -15px;
+	 animation-delay: 0.2s;
+}
+  .indicator span:nth-child(3) {
+	 top: 0;
+	 left: 0;
+	 animation-delay: 0.4s;
+}
+  .indicator span:nth-child(4) {
+	 top: 15px;
+	 left: 15px;
+	 animation-delay: 0.6s;
+}
+  .indicator span:nth-child(5) {
+	 top: 30px;
+	 left: 30px;
+	 animation-delay: 0.8s;
+}
+ @keyframes animate {
+	 0% {
+		 border-color: #fff;
+		 transform: translate(0, 0);
+	}
+	 20% {
+		 border-color: #fff;
+		 transform: translate(15px, 15px);
+	}
+	 20.1%, 100% {
+		 border-color: #ffd64a;
+	}
 }
